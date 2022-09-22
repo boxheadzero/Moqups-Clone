@@ -1,0 +1,75 @@
+.header {
+    background-color: $color-primary-light;
+    
+    &__hero {
+        max-width: 144rem;
+        margin: 0 auto;
+        padding: 10rem;
+    }
+
+    &__content {
+        display: flex;
+        margin-bottom: 3rem;
+
+    }
+
+    &__text {
+        width: 50%;
+        margin-right: 2rem;
+    }
+
+    &__paragraph {
+        color: $color-white;
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin: 3rem 0;
+    }
+
+    &__img {
+        max-width: 60%;
+        max-height: 40%;
+        margin-top: -6rem;
+        margin-right: -10rem;
+    }
+
+    &__credit {
+        display: block;
+        text-align: center;
+
+        &-box-1 {
+            display: inline-block;
+            text-align: center;
+        }
+
+        &-box-2 {
+            display: inline-block;
+            text-align: center;
+            align-items: center;
+
+            & img {
+                display: inline-block;
+                width: 8rem;
+                box-sizing: content-box;
+                height: 2.5rem;
+                padding: 1rem 0;
+
+                &:not(:last-child) {
+                    margin-right: 2rem;
+                }
+            }
+        }
+
+        &-text {
+            color: $color-grey-light;
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-right: 2rem;
+            transform: translateY(-1.8rem);
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+        text-align: center;
+    }
+}
