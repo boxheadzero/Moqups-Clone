@@ -43,5 +43,29 @@
     &:focus {
         transform: scale(0.95);
     }
+}
 
+.btn-3 {
+    margin-bottom: 15rem;
+
+    &__text-above {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $color-primary-dark-2;
+        margin-top: 5rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 2rem 8rem;
+        background-color: $color-orange;
+        color: $color-white;
+        font-size: 2rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all .2s;
+    }
 }

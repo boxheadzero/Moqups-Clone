@@ -1,0 +1,101 @@
+.sold {
+    background-color: $color-grey-light;
+    display: block;
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 0 10rem;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        display: block;
+        width: 50rem;
+        padding: 6rem;
+        text-align: center;
+    }
+
+    &__heading {
+        color: $color-primary-dark-2;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    &__description {
+        margin-top: 3.5rem;
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+
+    &__img {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    &__grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(min-content, 1fr));
+        grid-template-rows: repeat(3, minmax(min-content, 1fr));
+        grid-gap: 2rem;
+        margin: 2rem;
+    }
+
+    &__grid-icon {
+        width: 5rem;
+        height: 5rem;
+        margin-bottom: .5rem;
+    }
+
+    &__heading-3 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: $color-font-1;
+        margin-bottom: 1.5rem;
+
+        &__span {
+
+
+            &--1 {
+                color: $color-green;
+            }
+
+            &--2 {
+                color: $color-orange;
+            }
+
+            &--3 {
+                color: $color-primary-light-1;
+            }
+
+            &--4 {
+                color: $color-orange-brown;
+            }
+
+            &--5 {
+                color: $color-pink;
+            }
+
+            &--6 {
+                color: $color-primary-dark-2;
+            }
+        }
+    }
+
+    &__paragraph-1 {
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: $color-font-1;
+        margin-bottom: 1.5rem;
+        line-height: 2.75rem;
+    }
+
+    &__paragraph-2 {
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: $color-font-1;
+        line-height: 2.75rem;
+    }
+}
