@@ -1,0 +1,93 @@
+.testimonial {
+    background-color: $color-primary-light;
+
+    &__container {
+        max-width: 144rem;
+        margin: 0 auto;
+    }
+
+    &__header {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        color: $color-white;
+        font-size: 2.4rem;
+        font-weight: 900;
+        padding: 6rem 0;
+    }
+
+    &__grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(min-content, 1fr));
+        grid-template-rows: repeat(3, minmax(min-content, 1fr));
+        grid-gap: 4rem;
+        margin: 0 5rem;
+        padding: 4rem 0;
+    }
+
+    &__grid-item {
+        background-color: $color-grey-light;
+        border: none;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+    }
+
+    &__profile {
+
+        
+        &-content {
+            display: flex;
+            margin-bottom: 1.5rem;
+        }
+
+        &-text {
+            padding-left: 1rem;
+        }
+        
+        &-name {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: $color-font-1;
+        }
+
+        &-id {
+            font-size: 1rem;
+            font-weight: 300;
+            color: currentColor;
+        }
+
+        &-shape {
+            width: 5rem;
+            height: 5rem;
+            float: left;
+            overflow: hidden;
+
+            @supports (shape-outside: circle(50% at 50% 50%)) or (-o-shape-outside: circle(50% at 50% 50%)) {
+                shape-outside: circle(50% at 50% 50%);
+                -o-shape-outside: circle(50% at 50% 50%);
+            }
+
+            @supports (clip-path: circle(50% at 50% 50%)) or (-webkit-clip-path: circle(50% at 50% 50%)) {
+                clip-path: circle(50% at 50% 50%);
+                -webkit-clip-path: circle(50% at 50% 50%);
+            }
+        }
+        
+        &-img {
+            width: 100%;
+            backface-visibility: hidden;
+
+            &--fix {
+                height: 100%;
+            }
+        }
+
+        &-comment {
+            font-size: 1rem;
+            font-weight: 300;
+            color: $color-grey-dark;
+        }
+    }
+}

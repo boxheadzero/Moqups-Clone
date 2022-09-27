@@ -1,0 +1,109 @@
+.footer {
+    background-color: $color-white;
+    max-width: 144rem;
+    margin: 0 auto;
+
+    &__grid-container {
+        padding-top: 4rem;
+        margin-bottom: 4rem;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(min-content, 1fr));
+    }
+
+    &__category {
+        padding: 0 4rem;
+    }
+
+    &__category-head {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $color-primary-dark;
+        margin-bottom: 1.2rem;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            font-size: 1.6rem;
+            font-weight: 300;
+            text-decoration: none;
+            color: $color-black;
+        }
+
+        &:hover,
+        &:active {
+            text-decoration: underline;
+        }
+    }
+
+    &__icons {
+        display: inline-block;
+    }
+
+    &__icon {
+        margin-top: 1.2rem;
+        width: 3rem;
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem 0 4rem 0;
+        padding-left: 2rem;
+        position: relative;
+
+        &-text-box {
+            flex: 4 0 auto;
+        }
+
+        &-header {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: $color-primary-dark;
+        }
+
+        &-link {
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            &:link,
+            &:visited {
+                font-size: 1.2rem;
+                font-weight: 300;
+                text-decoration: none;
+                color: $color-black;
+            }
+    
+            &:hover,
+            &:active {
+                text-decoration: underline;
+            }
+        }
+
+        &-dropdrown {
+            flex: 1 0 auto;
+            text-align: end;
+            padding: 1rem;
+        }
+    }
+
+    &__logo {
+        margin-right: 2rem;
+        flex: .5 0 auto;
+    }
+}

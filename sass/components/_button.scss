@@ -64,7 +64,23 @@
         background-color: $color-orange;
         color: $color-white;
         font-size: 2rem;
-        font-weight: 600;
+        font-weight: 800;
+        cursor: pointer;
+        transition: all .2s;
+    }
+}
+
+.btn-4 {
+    
+    &:link,
+    &:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 2rem 8rem;
+        background-color: $color-yellow;
+        color: $color-font-1;
+        font-size: 2rem;
+        font-weight: 800;
         cursor: pointer;
         transition: all .2s;
     }

@@ -1,0 +1,33 @@
+.sign-in {
+    background-color: $color-primary-dark-2;
+
+    &__container {
+        max-width: 144rem;
+        margin: 0 auto;
+        padding: 4rem 0;
+        display: grid;
+        grid-template-rows: auto;
+        justify-items: center;
+    }
+
+    &__header {
+        margin-bottom: 4rem;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $color-white;
+        opacity: .8;
+        margin-bottom: 3rem;
+    }
+
+    &__btn {
+        margin-bottom: 1rem;
+    }
+
+    &__text-below-button {
+        color: $color-white;
+        opacity: .8;
+    }
+}
