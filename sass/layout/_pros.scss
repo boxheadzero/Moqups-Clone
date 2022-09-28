@@ -20,10 +20,63 @@
         grid-template-columns: repeat(3 , minmax(min-content, 1fr));
         padding: 4rem;
         grid-gap: 8rem;
+
+        @media only screen and (max-width: $bp-large) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3 , minmax(min-content, 1fr));
+       }
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 0;
+        }
     }
 
     &__content {
 
+        @media only screen and (max-width: $bp-large) {
+            display: flex;
+
+            &-text {
+
+                @media only screen and (max-width: $bp-large) {
+                    flex: 1;
+                    padding-left: 2rem;
+                }
+
+                @media only screen and (max-width: $bp-medium) {
+                    text-align: left;
+                }
+
+                &--right {
+
+                    @media only screen and (max-width: $bp-large) {
+                        padding-left: 0;
+                        padding-right: 2rem;
+                    }
+
+                    @media only screen and (max-width: $bp-smallest) {
+                        padding-left: 2rem;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex-direction: column;
+            align-items: center;
+       }
+
+        &--right {
+
+            @media only screen and (max-width: $bp-large) {
+                flex-direction: row-reverse;
+            }
+            
+            @media only screen and (max-width: $bp-medium) {
+                flex-direction: column;
+           }
+        }
     }
 
     &__content-header {
@@ -37,6 +90,16 @@
         display: block;
         width: 100%;
         margin-bottom: 3rem;
+
+        @media only screen and (max-width: $bp-large) {
+            width: 40%;
+            margin-bottom: 0;
+       }
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 80%;
+            margin-bottom: 2rem;
+        }
     }
 
     &__list {
@@ -49,6 +112,10 @@
         line-height: 3rem;
         color: $color-grey-dark;
         position: relative;
+
+        @media only screen and (max-width: $bp-large) {
+            position:static;
+       }     
 
         &:not(:last-child) {
             margin-bottom: 1.5rem;
@@ -66,6 +133,10 @@
                 left: -2.5rem;
                 top: .8rem;
                 position: absolute;
+
+                @media only screen and (max-width: $bp-large) {
+                    position:static;
+               }
 
                 @supports (-webkit-mask-image: url()) or (mask-image: url()) {
                     background-color: $color-green;
@@ -89,6 +160,10 @@
                 top: .8rem;
                 position: absolute;
 
+                @media only screen and (max-width: $bp-large) {
+                    position:static;
+               }
+
                 @supports (-webkit-mask-image: url()) or (mask-image: url()) {
                     background-color: $color-orange;
                     background-image: none;
@@ -110,6 +185,10 @@
                 left: -2.5rem;
                 top: .8rem;
                 position: absolute;
+
+                @media only screen and (max-width: $bp-large) {
+                    position:static;
+               }
 
                 @supports (-webkit-mask-image: url()) or (mask-image: url()) {
                     background-color: $color-orange-brown;

@@ -5,12 +5,20 @@
         max-width: 144rem;
         margin: 0 auto;
         padding: 0 10rem;
+
+        @media only screen and (max-width: $bp-large) {
+            padding: 0 4rem;
+        }
     }
 
     &__header {
         display: inline-block;
         width: 100%;
         text-align: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: 3rem;
+        }
     }
 
     &__list {
@@ -73,11 +81,21 @@
         display: flex;
         margin: 2.5rem auto;
         align-items: center;
+
+        @media only screen and (max-width: $bp-large) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__text-box {
         margin-top: -6rem;
         margin-right: 8rem;
+
+        @media only screen and (max-width: $bp-large) {
+            margin: 2rem 0;
+            text-align: center;
+        }
     }
 
     &__text {
@@ -85,19 +103,39 @@
         
         &-title {
             margin-bottom: 2.5rem;
+
+            @media only screen and (max-width: $bp-large) {
+                margin-bottom: 1rem;
+            }
         }
     }
 
     &__paragraph {
         font-size: 1.4rem;
         font-weight: 400;
+
+        @media only screen and (max-width: $bp-large) {
+            margin-bottom: 2rem;
+        }
     }
 
     &__img {
         width: 30vw;
+
+        @media only screen and (max-width: $bp-large) {
+            width: 90vw;
+            box-shadow: 0 2rem 4rem rgba($color-black, .3);
+        }
     }
 
     &__bg-footer {
         width: 100%;
+
+        @media only screen and (max-width: $bp-large) {
+            width: 110%;
+            margin-left: -4rem;
+            box-shadow: 0 1rem 2rem rgba($color-black, .2);
+            transform: translateY(1rem);
+        }
     }
 }

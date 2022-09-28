@@ -1,17 +1,61 @@
 .nav {
     background-color: $color-primary-light;
 
+    @media only screen and (max-width: $bp-smallest) {
+        background-color: $color-primary-dark;
+    }
+
     &__container {
         max-width: 144rem;
         margin: 0 auto;
         display: flex;
         padding: 1.5rem 10rem;
         align-items: center;
+
+        @media only screen and (max-width: $bp-large) {
+            justify-content: space-between;
+            padding: 2rem;
+        }
     }
 
     &__logo {
         height: 5rem;
         margin-right: 4rem;
+    }
+
+    &__toggle {
+        display: none;
+        position: relative;
+
+        &-icon {
+
+            &,
+            &::before,
+            &::after {
+                width: 3rem;
+                height: 2px;
+                background-color: $color-grey-light;
+                display: inline-block;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+            }
+
+            &::before { top: -.8rem; }
+            &::after { top: .8rem; }
+        }
+        
+        @media only screen and (max-width: $bp-medium) {
+            display: block;
+        }
+          
+        @media only screen and (max-width: $bp-smallest) {
+            display: flex;
+        }
     }
 
     &__lists {
@@ -20,6 +64,10 @@
     }
 
     &__item {
+
+        @media only screen and (max-width: $bp-medium) {
+            display: none;
+        }
 
         &:not(:last-child) {
             margin-right: 2rem;

@@ -8,10 +8,25 @@
         margin-bottom: 4rem;
         display: grid;
         grid-template-columns: repeat(4, minmax(min-content, 1fr));
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 4rem;
+            grid-template-columns: repeat(2, minmax(min-content, 1fr));
+            grid-row-gap: 4rem;
+       }
+
+        @media only screen and (max-width: $bp-smallest) {
+            grid-template-columns: repeat(1, minmax(min-content, 1fr));
+        }
     }
 
     &__category {
         padding: 0 4rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            justify-self: center;
+            text-align: center;
+       }
     }
 
     &__category-head {
@@ -40,6 +55,11 @@
             font-weight: 300;
             text-decoration: none;
             color: $color-black;
+
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: 1.8rem;
+                font-weight: 400;
+            }
         }
 
         &:hover,
@@ -55,6 +75,18 @@
     &__icon {
         margin-top: 1.2rem;
         width: 3rem;
+
+        @media only screen and (max-width: $bp-smallest) {
+            width: 6rem;
+        }
+
+        &:not(:last-child) {
+            margin-right: .5rem;
+
+            @media only screen and (max-width: $bp-smallest) {
+                margin-right: 1.2rem;
+            }
+        }
     }
 
     &__copyright {
@@ -65,14 +97,32 @@
         padding-left: 2rem;
         position: relative;
 
+        @media only screen and (max-width: $bp-smallest) {
+            flex-direction: column;
+            padding: 0;
+        }
+
         &-text-box {
             flex: 4 0 auto;
+
+            @media only screen and (max-width: $bp-smallest) {
+                text-align: center;
+            }
         }
 
         &-header {
             font-size: 1.6rem;
             font-weight: 400;
             color: $color-primary-dark;
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 1.8rem;
+           }
+
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: 2rem;
+                font-weight: 500;
+            }
         }
 
         &-link {
@@ -87,6 +137,14 @@
                 font-weight: 300;
                 text-decoration: none;
                 color: $color-black;
+
+                @media only screen and (max-width: $bp-medium) {
+                    font-size: 1.4rem;
+               }
+               
+                @media only screen and (max-width: $bp-smallest) {
+                    font-size: 1.6rem;
+                }
             }
     
             &:hover,
@@ -105,5 +163,9 @@
     &__logo {
         margin-right: 2rem;
         flex: .5 0 auto;
+
+        @media only screen and (max-width: $bp-smallest) {
+            margin: 0 0 2rem 0;
+        }
     }
 }

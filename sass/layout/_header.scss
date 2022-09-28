@@ -5,31 +5,57 @@
         max-width: 144rem;
         margin: 0 auto;
         padding: 10rem;
+
+        @media only screen and (max-width: $bp-large) {
+            padding: 4rem;
+        }
     }
 
     &__content {
         display: flex;
         margin-bottom: 3rem;
+        
+        @media only screen and (max-width: $bp-large) {
+            justify-content: center;
+        }
 
+        @media only screen and (max-width: $bp-medium) {
+            margin-bottom: 5rem;
+        }
     }
-
+    
     &__text {
         width: 50%;
         margin-right: 2rem;
-    }
 
+        @media only screen and (max-width: $bp-large) {
+            text-align: center;
+            width: 100%;
+        }
+    }
+    
     &__paragraph {
         color: $color-white;
         font-size: 1.4rem;
         font-weight: 400;
         margin: 3rem 0;
-    }
 
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 1.8rem;
+            padding-bottom: 3rem;
+            margin-bottom: 0;
+        }
+    }
+    
     &__img {
         max-width: 60%;
         max-height: 40%;
         margin-top: -6rem;
         margin-right: -10rem;
+
+        @media only screen and (max-width: $bp-large) {
+            display: none;
+        }
     }
 
     &__credit {
@@ -44,7 +70,6 @@
         &-box-2 {
             display: inline-block;
             text-align: center;
-            align-items: center;
 
             & img {
                 display: inline-block;
@@ -57,6 +82,15 @@
                 &:not(:last-child) {
                     margin-right: 2rem;
                 }
+
+                @media only screen and (max-width: $bp-large) {
+                    width: 10rem;
+                    padding: 0;
+                }
+
+                @media only screen and (max-width: $bp-smallest) {
+                    padding: .5rem;
+                }
             }
         }
 
@@ -66,6 +100,10 @@
             font-weight: 400;
             margin-right: 2rem;
             transform: translateY(-1.8rem);
+
+            @media only screen and (max-width: $bp-large) {
+                transform: translateY(-1.2rem);
+            }
         }
     }
 
@@ -75,6 +113,10 @@
 
         &-below {
             color: $color-grey-light;
+
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: 1.2rem;
+            }
         }
     }
 }

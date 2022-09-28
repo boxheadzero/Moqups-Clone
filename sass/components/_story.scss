@@ -9,6 +9,14 @@
         margin: 6rem 0;
         padding: 0 10rem;
         justify-content: center;
+
+        @media only screen and (max-width: $bp-large) {
+            padding: 0 2rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding: 0;
+        }
     }
 
     &__content,
@@ -18,13 +26,26 @@
         justify-content: space-between;
         align-items: center;
 
+        @media only screen and (max-width: $bp-medium) {
+            flex-direction: column-reverse;
+        }
+
         &-right {
             flex-direction: row-reverse;
+
+            @media only screen and (max-width: $bp-medium) {
+                flex-direction: column-reverse;
+            }
         }
 
         &:not(:last-child) {
             margin-bottom: 10rem;
+
+            @media only screen and (max-width: $bp-large) {
+                margin-bottom: 5rem;
+            }
         }
+
     }
 
     &__text {
@@ -32,47 +53,121 @@
         max-width: 50%;
         padding-right: 10rem;
         text-align: left;
+       
+        @media only screen and (max-width: $bp-large) {
+            padding-right: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            max-width: 100%;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            text-align: center;
+            padding: 0 2rem;
+        }
 
         &-pd {
             padding-right: 0;
             text-align: right;
+
+            @media only screen and (max-width: $bp-medium) {
+                text-align: left;
+            }
         }
     }
 
     &__heading {
-        max-width: 50rem;
         color: $color-font-1;
         align-self: center;
         margin-bottom: 2rem;
 
-        &__left {
-            text-align: left;
+        @media only screen and (max-width: $bp-smallest) {
+            text-align: center;
         }
 
-        &__right {
+        &-left {
+            text-align: left;
+
+            @media only screen and (max-width: $bp-medium) {
+                text-align: center;
+            }
+        }
+
+        &-right {
             text-align: right;
+
+            @media only screen and (max-width: $bp-medium) {
+                text-align: center;
+            }
         }
     }
 
     &__paragraph {
         font-size: 1.4rem;
         font-weight: 400;
+
+        @media only screen and (max-width: $bp-large) {
+            font-size: 1.6rem;
+       }
+
+        @media only screen and (max-width: $bp-large) {
+            font-size: 1.6rem;
+       }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 1.8rem;
+            line-height: 3rem;
+            text-align: center;
+        }
     }
 
     &__img {
         flex: 0 0 auto;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-bottom: 2rem;
+       }
     }
 
     &__img-1 {
         max-width: 50%;
+
+        @media only screen and (max-width: $bp-medium) {
+            max-width: 80%;
+       }
+
+        @media only screen and (max-width: $bp-smallest) {
+            max-width: 100%;
+        }
     }
 
     &__img-2 {
         max-width: 60%;
         padding-right: 3rem;
+
+        @media only screen and (max-width: $bp-large) {
+            max-width: 50%;
+        }
+        
+        @media only screen and (max-width: $bp-medium) {
+            max-width: 80%;
+       }
+
+        @media only screen and (max-width: $bp-smallest) {
+            max-width: 100%;
+        }
     }
 
     &__img-3 {
         max-width: 50%;
+
+        @media only screen and (max-width: $bp-medium) {
+            max-width: 80%;
+       }
+
+        @media only screen and (max-width: $bp-smallest) {
+            max-width: 100%;
+        }
     }
 }
